@@ -1,0 +1,127 @@
+.accountCard {
+  flex: 1;
+  background-color: white;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+  position: relative;
+}
+
+.ribbonBox {
+  position: absolute;
+  width: 8rem;
+  height: 8rem;
+  /* background-color: red; */
+  top: -1.2rem;
+  right: -1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.ribbonBox::after {
+  position: absolute;
+  width: 150%;
+  height: 3rem;
+  transform: rotate(45deg) translateY(-1.5rem);
+  box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.2);
+}
+
+.ribbonBox::before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 1.1rem;
+  height: 1.1rem;
+  right: 0;
+  bottom: 0;
+}
+
+.accountCard.primary .ribbonBox::after {
+  content: "38% 0FF";
+  color: white;
+  background-color: var(--color-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.accountCard.primary .ribbonBox::before {
+  background-color: var(--color-blue);
+  background-color: var(--color-blue);
+  box-shadow: 15rem -15rem var(--color-blue);
+}
+
+.accountCard.danger .ribbonBox::after {
+  content: "69% 0FF";
+  color: white;
+  background-color: var(--color-red);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.accountCard.danger .ribbonBox::before {
+  background-color: var(--color-red);
+  background-color: var(--color-red);
+  box-shadow: 15rem -15rem var(--color-red);
+}
+
+.accountCard.primary {
+  border-top: 10px solid var(--color-blue);
+}
+.accountCard.danger {
+  border-top: 10px solid var(--color-red);
+}
+.accountCard.secondary {
+  border-top: 10px solid var(--color-gray);
+}
+
+.accountCard .cardYear {
+  font-size: var(--text-small);
+  text-transform: uppercase;
+  font-weight: 300;
+  text-align: center;
+}
+
+.cardPriceDesc {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.cardPriceLarge span {
+  font-size: 4rem;
+}
+
+.cardPriceDesc .cardPriceSmall {
+  font-size: 1rem;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.cardLists {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+}
+
+.cardLists li {
+  padding: 15px 0;
+  font-size: 1.2rem;
+  font-weight: 400;
+  border-bottom: 1px solid var(--bg-light);
+}
+
+.cardLists li:last-child {
+  border-bottom: none;
+  color: var(--color-blue);
+}

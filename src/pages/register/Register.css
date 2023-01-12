@@ -1,0 +1,15 @@
+.remember {
+  /* border: 1px solid red; */
+  display: flex;
+  gap: 0.6rem;
+  font-size: 1.2rem;
+}
+
+.remember input {
+  cursor: pointer;
+  width: 30px;
+}
+
+.remember span {
+  color: var(--color-blue);
+}

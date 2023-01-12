@@ -1,0 +1,22 @@
+.card {
+  /* border: 1px solid red; */
+  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 15vw);
+  column-gap: 3rem;
+  row-gap: 0.5rem;
+}
+
+.card li {
+  /* border: 1px solid green; */
+  padding: 10px;
+  text-align: center;
+  font-size: var(--text-small);
+  cursor: pointer;
+  z-index: 99;
+}
+
+.card li:hover {
+  background-color: var(--color-blue);
+  color: white;
+}

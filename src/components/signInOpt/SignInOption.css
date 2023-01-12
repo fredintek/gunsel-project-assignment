@@ -1,0 +1,28 @@
+.opt {
+  padding: 1rem;
+  font-size: var(--text-small);
+  color: white;
+  font-weight: 400;
+  border-radius: 5px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.opt span {
+  margin-left: 0.4rem;
+}
+
+.opt.facebook {
+  background-color: #3b5998;
+}
+.opt.git {
+  background-color: #222;
+}
+.opt.google {
+  background-color: #d74836;
+}
+.opt.twitter {
+  background-color: #55acee;
+}

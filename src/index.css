@@ -1,13 +1,52 @@
-body {
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,regular,500,600,700,800,300italic,italic,500italic,600italic,700italic,800italic);
+
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  outline: none;
+  text-decoration: none;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+:root {
+  /* text settings */
+  --text-small: 1.4rem;
+  --text-normal: 1.6rem;
+  --text-medium: 2rem;
+  --text-large: 4rem;
+  --text-shade: 2px 2px 8px rgb(0 0 0 / 25%);
+  --text-dark: #333;
+  --text-transparent: #aaa;
+
+  /* background settings */
+  --bg-light: rgb(228, 224, 224);
+  --bg-white: #fff;
+
+  /* color settings */
+  --color-red: #e74c3c;
+  --color-gray: #eee;
+  --color-blue: #2a80b9;
+  --color-light-blue: #3498db;
+
+  /* utilities settings */
+  --container: 98%;
+  --border-radius-sm: 4px;
+  --box-shade: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  --transition: all 400ms ease-in;
+}
+
+body {
+  font-size: 62.5%;
+  font-family: "Open Sans", sans-serif;
+  color: var(--text-dark);
+  background-color: var(--bg-light);
+}
+
+@media (max-width: 37.5em) {
+  body {
+    font-size: 50%;
+  }
 }

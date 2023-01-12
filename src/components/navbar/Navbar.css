@@ -1,0 +1,207 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 6rem;
+  border-bottom: 1px solid lightgray;
+  background-color: var(--bg-white);
+  padding: 0 2rem;
+  z-index: 999;
+}
+
+.navMobile {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(-100%);
+  opacity: 0;
+  transition: var(--transition);
+}
+
+.navMenu {
+  display: none;
+  font-size: var(--text-small);
+}
+
+.navbar .container {
+  /* border: 1px solid green; */
+  width: var(--container);
+  max-width: 160rem;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.navbarContent {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+}
+
+.navbarLeft,
+.navbarRight {
+  display: flex;
+  font-size: var(--text-small);
+  gap: 1.8rem;
+}
+
+.navbarRightItem {
+  position: relative;
+  color: black;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  cursor: pointer;
+  transition: var(--transition);
+  /* border: 1px solid red; */
+}
+
+.navbarLogo {
+  transition: var(--transition);
+  cursor: pointer;
+}
+
+.navbarIcon {
+  opacity: 0.7;
+}
+
+.navbarRightItem > p {
+  font-weight: 300;
+}
+
+.navbarLan,
+.navbarAbout {
+  position: relative;
+}
+
+.navbarLanBtn,
+.navbarAboutBtn {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: var(--text-normal);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: black;
+  opacity: 0.8;
+}
+
+.navbarLanBtn span,
+.navbarAboutBtn span {
+  font-weight: 300;
+}
+
+.lanDropdown,
+.aboutDropdown {
+  position: absolute;
+  top: 200%;
+  left: 20px;
+}
+
+.lanDropdown.open,
+.aboutDropdown.open {
+  display: block;
+}
+
+.lanDropdown.close,
+.aboutDropdown.close {
+  display: none;
+}
+
+.arrowdown {
+  margin-left: -5px;
+}
+
+.lanCard {
+  background-color: white;
+  width: max-content;
+  box-shadow: var(--box-shade);
+  border-radius: var(--border-radius-sm);
+  padding: 1.2rem;
+  overflow: hidden;
+}
+
+.lanCard.open {
+  display: block;
+}
+
+.lanCard.close {
+  display: none;
+}
+
+.lanCard::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  position: absolute;
+  top: -10px;
+  left: 5px;
+  transform: rotate(-45deg);
+}
+
+@media (max-width: 62.5em) {
+  .navMenu {
+    display: block;
+    cursor: pointer;
+    opacity: 0.8;
+  }
+
+  .navbarRightItem > p {
+    display: none;
+  }
+
+  .navbarLeft {
+    display: none;
+  }
+
+  .navbar.active .navMobile {
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 999;
+  }
+
+  .navMobiletbg {
+    flex: 0.6;
+    background-color: var(--text-dark);
+    opacity: 0.4;
+  }
+
+  .navMobileContent {
+    flex: 0.4;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    font-size: var(--text-small);
+  }
+
+  .navMobileItem {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--text-dark);
+  }
+
+  .navMobileClose {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: var(--text-small);
+  }
+}
+
+@media (max-width: 37.5em) {
+  .navbarBtn {
+    display: none;
+  }
+}

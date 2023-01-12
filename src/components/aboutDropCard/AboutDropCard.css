@@ -1,0 +1,21 @@
+.aboutCard {
+  /* border: 1px solid red; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.aboutCard li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: var(--text-normal);
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+  z-index: 99;
+}
+
+.aboutCard li:hover {
+  background-color: var(--color-blue);
+  color: white;
+}
