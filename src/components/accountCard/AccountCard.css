@@ -106,6 +106,8 @@
   font-size: 1rem;
   text-transform: uppercase;
   font-weight: 300;
+  /* modified the billed text container to achieve an even look */
+  height: 2rem;
 }
 
 .cardLists {

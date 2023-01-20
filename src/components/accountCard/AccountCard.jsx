@@ -11,7 +11,7 @@ const AccountCard = ({ year, fprice, sprice, color, offer }) => {
           <small>$</small>
           <span>{fprice}</span>
         </p>
-        {sprice ? <p className="cardPriceSmall">Billed ${sprice}</p> : <></>}
+        <p className="cardPriceSmall">{sprice ? `Billed ${sprice}` : ""}</p>
       </div>
       <div className="cardBtn">
         <Button text="upgrade" type={color} size="big" />
